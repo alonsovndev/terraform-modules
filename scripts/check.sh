@@ -8,7 +8,7 @@ case "$check_mode" in
   *) printf 'Unsupported check: %s\n' "$check_mode" >&2; exit 2 ;;
 esac
 
-for module_directory in aws/* cloudflare/* examples/* tests/fixtures/*; do
+for module_directory in aws/* cloudflare/* examples/* profiles/* tests/fixtures/*; do
   [ -d "$module_directory" ] || continue
   printf '\n%s: %s\n' "$check_mode" "$module_directory"
   case "$check_mode" in
