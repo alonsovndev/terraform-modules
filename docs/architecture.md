@@ -20,7 +20,7 @@ S3 exposes its regional REST endpoint. CloudFront consumes that output; the root
 
 ## Profiles
 
-The [composition examples](../examples/README.md) exercise module wiring. `static`, `lean`, and `enterprise` deployment profiles require real projects and remain Phase 4 work. No cost target, deployment readiness, or cloud permissions have been established by mocked tests.
+The [composition examples](../examples/README.md) exercise module wiring. The [`static`, `lean`, and `enterprise` profiles](../profiles/README.md) compose the modules for the platform's deployment profiles; see [ADR-004](adr/adr-004-deployment-profiles.md). They are validated offline only: no cost target, deployment readiness, or cloud permissions have been established by mocked tests.
 
 ## Secrets and artifacts
 

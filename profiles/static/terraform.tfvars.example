@@ -1,0 +1,7 @@
+account_id       = "00000000000000000000000000000000"
+site_name        = "example-docs"
+domain           = "example.com"
+hostname         = "docs.example.com"
+assets_directory = "../../build"
+spa_mode         = false
+# existing_zone_id = "00000000000000000000000000000000"

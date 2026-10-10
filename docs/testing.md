@@ -23,10 +23,12 @@ make init
 make test
 ```
 
+Profile roots have their own `tests/profile.tftest.hcl`. Child-module resources are not visible to test assertions, so profile roots expose the roles, secrets, and subnets they configure as outputs for the tests to check.
+
 The shared files under `tests/aws` and `tests/cloudflare` contain fabricated account IDs, ARNs, domain names, and computed attributes. They do not contain secret values. Plan-time mock overrides make output assertions deterministic.
 
 ## Limits
 
 Mocks substitute provider behavior. Validation checks schema compatibility, while mocked tests check Terraform configuration and wiring. Neither proves account permissions, service availability, runtime behavior, TLS/DNS activation, image compatibility, provider upload behavior, or actual asset-change redeployment.
 
-Verify those behaviors on real projects during Phase 4 with separately approved nonproduction environments. Keep local tests mocked; add live validation as an explicit separate workflow rather than giving local checks cloud credentials.
+Verify those behaviors on real projects with separately approved nonproduction environments (a Phase 4 follow-up; the profiles are validated offline only). Keep local tests mocked; add live validation as an explicit separate workflow rather than giving local checks cloud credentials.

@@ -1,0 +1,15 @@
+project_name          = "example-app"
+aws_region            = "us-east-1"
+cloudflare_account_id = "00000000000000000000000000000000"
+domain                = "example.com"
+web_hostname          = "app.example.com"
+web_assets_directory  = "../../../web/dist"
+api_image_uri         = "123456789012.dkr.ecr.us-east-1.amazonaws.com/example-app@sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+database_secret_arn   = "arn:aws:secretsmanager:us-east-1:123456789012:secret:example-app-database-AbCdEf"
+postgres_host         = "aws-0-us-east-1.pooler.supabase.com"
+postgres_port         = 6543
+github_repository     = "example-owner/example-api"
+github_environment    = "production"
+# existing_zone_id            = "00000000000000000000000000000000"
+# create_github_provider      = false
+# existing_github_provider_arn = "arn:aws:iam::123456789012:oidc-provider/token.actions.githubusercontent.com"
