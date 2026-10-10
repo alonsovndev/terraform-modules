@@ -1,0 +1,4 @@
+github_repository     = "example-owner/example-repository"
+bucket_arn            = "arn:aws:s3:::example-deployment-bucket"
+existing_provider_arn = null
+create_provider       = true
