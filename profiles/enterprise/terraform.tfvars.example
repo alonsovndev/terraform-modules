@@ -1,0 +1,14 @@
+project_name              = "example-app"
+aws_region                = "us-east-1"
+availability_zones        = ["us-east-1a", "us-east-1b"]
+api_image_uri             = "123456789012.dkr.ecr.us-east-1.amazonaws.com/example-app@sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+api_certificate_arn       = "arn:aws:acm:us-east-1:123456789012:certificate/00000000-0000-0000-0000-000000000000"
+postgres_version          = "17.7"
+final_snapshot_identifier = "example-app-postgres-final-replace-before-teardown"
+web_bucket_name           = "example-app-web-123456789012"
+github_repository         = "example-owner/example-app"
+github_environment        = "production"
+# web_aliases                  = ["app.example.com"]
+# web_certificate_arn          = "arn:aws:acm:us-east-1:123456789012:certificate/11111111-1111-1111-1111-111111111111"
+# create_github_provider       = false
+# existing_github_provider_arn = "arn:aws:iam::123456789012:oidc-provider/token.actions.githubusercontent.com"

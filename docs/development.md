@@ -20,7 +20,7 @@ Initialization contacts the Terraform registry for approved provider packages. S
 
 Library modules declare Terraform `>=1.12,<2`, AWS `>=6.68.0,<7`, or Cloudflare `~>5.27.0`. Example roots pin AWS 6.68.0 and Cloudflare 5.27.0 exactly. Their checked-in lock files provide reproducible selections for local verification.
 
-`make init` copies the appropriate example lock into each library module's ignored local lock file and runs initialization with `-lockfile=readonly`. Consuming projects own their own lock files. Provider upgrades require an explicit change and approval; local checks do not upgrade them.
+`make init` copies the appropriate example lock into each library module's ignored local lock file and runs initialization with `-lockfile=readonly`. Profile roots under `profiles/` carry their own committed lock files, which `make init` uses read-only without copying. Consuming projects own their own lock files. Provider upgrades require an explicit change and approval; local checks do not upgrade them.
 
 ## Adding or changing a module
 
